@@ -30,6 +30,7 @@ func main(){
         
         go anySlowProcess(chanelOutputA, "A", 1)
         go anySlowProcess(chanelOutputA, "B", 5)
+        go anySlowProcess(chanelOutputA, "C", 2)
         loadQueue()
         for i := 0; i < 20; i++ {
                 fmt.Println(<-chanelOutputA, "saida")
